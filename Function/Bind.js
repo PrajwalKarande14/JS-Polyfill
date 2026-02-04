@@ -1,3 +1,5 @@
+// returns function with this keyword bound to the provided value
+
 Function.prototype.myBind = function(thisArg,...args1){
     if(thisArg === null || thisArg === undefined) thisArg = globalThis
     const fn = this
