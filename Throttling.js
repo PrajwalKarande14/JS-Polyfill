@@ -1,0 +1,1 @@
+const throttle = (func, limit) => {
