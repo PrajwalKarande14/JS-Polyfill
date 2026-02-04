@@ -14,12 +14,12 @@ const greet = function(){
 }
 
 const obx = {name:"prajwal"}
-const obf = {name:"fuckyou"}
+const obf = {name:"Alice"}
 const boundGreet = greet.myBind(obx)
 boundGreet() //prajwal
 
 const boundGreet2 = greet.bind(obf)
-boundGreet2() //prajwal
+boundGreet2() //Alice
 
 
 
