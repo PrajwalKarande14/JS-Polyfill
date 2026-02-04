@@ -1,7 +1,7 @@
 Function.prototype.myCall = function(obj,...args){
     if(!obj) obj = globalThis
     obj = Object(obj)
-    const calledFunction = "calledFunction"
+    const calledFunction = Symbol("calledFunction")
 
     //create property in object with value of the called function
     obj[calledFunction] = this //->function called
