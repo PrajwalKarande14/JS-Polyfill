@@ -1,4 +1,4 @@
-
+//calls a function with a given this value and arguments provided as an array
 
 Function.prototype.myApply = function(obj,args){
     if(!obj) obj = globalThis
