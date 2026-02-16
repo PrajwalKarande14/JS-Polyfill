@@ -11,17 +11,21 @@ Function.prototype.myBind = function(thisArg,...args1){
     
 }
 
-const greet = function(){
-    console.log(this.name)
+function greet() {
+  console.log(this.name);
 }
 
-const obx = {name:"prajwal"}
-const obf = {name:"Alice"}
-const boundGreet = greet.myBind(obx)
-boundGreet() //prajwal
+const user1 = { name: 'Alice' };
+const user2 = { name: 'Bob' };
 
-const boundGreet2 = greet.bind(obf)
-boundGreet2() //Alice
+// First bind: Works as expected
+const bind1 = greet.myBind(user1);
+bind1(); // Output: "Alice"
 
+bind1.apply(user2)
+
+// Second bind: Does NOT override the first
+const bind2 = bind1.myBind(user2);
+bind2(); // Output: "Alice" (Still!)
 
 
